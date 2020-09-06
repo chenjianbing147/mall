@@ -1,0 +1,613 @@
+WARNING 2020-06-28 17:07:02,929 log 228 Not Found: /carts/simple/
+WARNING 2020-06-28 17:07:02,935 basehttp 154 "GET /carts/simple/ HTTP/1.1" 404 6423
+ERROR 2020-06-28 17:20:26,707 log 228 Internal Server Error: /carts/simple/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/Desktop/all_36_response/meiduo_mall/meiduo_mall/apps/carts/views.py", line 279, in get
+    'cart_skus':cart_skus})
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/http/response.py", line 558, in __init__
+    data = json.dumps(data, cls=encoder, **json_dumps_params)
+  File "/usr/lib/python3.6/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "/usr/lib/python3.6/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.6/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/core/serializers/json.py", line 104, in default
+    return super().default(o)
+  File "/usr/lib/python3.6/json/encoder.py", line 180, in default
+    o.__class__.__name__)
+TypeError: Object of type 'bytes' is not JSON serializable
+ERROR 2020-06-28 17:20:26,737 basehttp 154 "GET /carts/simple/ HTTP/1.1" 500 115438
+ERROR 2020-06-28 17:37:51,132 log 228 Internal Server Error: /carts/simple/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/Desktop/all_36_response/meiduo_mall/meiduo_mall/apps/carts/views.py", line 266, in get
+    for sku_id,count in item_dict():
+TypeError: 'dict' object is not callable
+ERROR 2020-06-28 17:37:51,136 basehttp 154 "GET /carts/simple/ HTTP/1.1" 500 86166
+ERROR 2020-06-30 03:09:25,967 log 228 Internal Server Error: /orders/settlement/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/Desktop/all_36_response/meiduo_mall/meiduo_mall/utils/Views.py", line 9, in inner
+    return fn(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/Desktop/all_36_response/meiduo_mall/meiduo_mall/apps/orders/views.py", line 45, in get
+    selected_item = redis_conn.semebers('selected_ %s' % request.user.id )
+AttributeError: 'Redis' object has no attribute 'semebers'
+ERROR 2020-06-30 03:09:25,985 basehttp 154 "GET /orders/settlement/ HTTP/1.1" 500 90894
+ERROR 2020-06-30 03:12:57,971 log 228 Internal Server Error: /orders/settlement/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/Desktop/all_36_response/meiduo_mall/meiduo_mall/utils/Views.py", line 9, in inner
+    return fn(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/Desktop/all_36_response/meiduo_mall/meiduo_mall/apps/orders/views.py", line 74, in get
+    'addresses':addresslist,
+NameError: name 'addresslist' is not defined
+ERROR 2020-06-30 03:12:57,974 basehttp 154 "GET /orders/settlement/ HTTP/1.1" 500 91551
+ERROR 2020-06-30 03:13:20,799 log 228 Internal Server Error: /orders/settlement/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/Desktop/all_36_response/meiduo_mall/meiduo_mall/utils/Views.py", line 9, in inner
+    return fn(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/Desktop/all_36_response/meiduo_mall/meiduo_mall/apps/orders/views.py", line 74, in get
+    'addresses':addresslist,
+NameError: name 'addresslist' is not defined
+ERROR 2020-06-30 03:13:20,800 basehttp 154 "GET /orders/settlement/ HTTP/1.1" 500 91551
+ERROR 2020-07-02 02:05:26,170 log 228 Internal Server Error: /orders/commit/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/Desktop/all_36_response/meiduo_mall/meiduo_mall/apps/orders/views.py", line 235, in post
+    order_id=order_id,
+NameError: name 'order_id' is not defined
+ERROR 2020-07-02 02:05:26,181 basehttp 154 "POST /orders/commit/ HTTP/1.1" 500 84145
+ERROR 2020-07-02 02:05:28,249 log 228 Internal Server Error: /orders/commit/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/Desktop/all_36_response/meiduo_mall/meiduo_mall/apps/orders/views.py", line 235, in post
+    order_id=order_id,
+NameError: name 'order_id' is not defined
+ERROR 2020-07-02 02:05:28,250 basehttp 154 "POST /orders/commit/ HTTP/1.1" 500 84145
+ERROR 2020-07-02 02:31:34,210 log 228 Internal Server Error: /orders/commit/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/Desktop/all_36_response/meiduo_mall/meiduo_mall/apps/orders/views.py", line 235, in post
+    order_id=order_id,
+NameError: name 'order_id' is not defined
+ERROR 2020-07-02 02:31:34,211 basehttp 154 "POST /orders/commit/ HTTP/1.1" 500 84185
+ERROR 2020-07-02 02:32:11,125 log 228 Internal Server Error: /orders/commit/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/Desktop/all_36_response/meiduo_mall/meiduo_mall/apps/orders/views.py", line 235, in post
+    order_id=order_id,
+NameError: name 'order_id' is not defined
+ERROR 2020-07-02 02:32:11,127 basehttp 154 "POST /orders/commit/ HTTP/1.1" 500 84185
+ERROR 2020-07-02 02:32:32,834 log 228 Internal Server Error: /orders/commit/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/Desktop/all_36_response/meiduo_mall/meiduo_mall/apps/orders/views.py", line 235, in post
+    id=order_id,
+NameError: name 'order_id' is not defined
+ERROR 2020-07-02 02:32:32,837 basehttp 154 "POST /orders/commit/ HTTP/1.1" 500 84173
+ERROR 2020-07-02 02:33:44,685 log 228 Internal Server Error: /orders/commit/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/Desktop/all_36_response/meiduo_mall/meiduo_mall/apps/orders/views.py", line 116, in post
+    + ('%09d' % user.id)
+TypeError: bad operand type for unary +: 'str'
+ERROR 2020-07-02 02:33:44,687 basehttp 154 "POST /orders/commit/ HTTP/1.1" 500 85016
+ERROR 2020-07-02 02:35:06,382 log 228 Internal Server Error: /orders/commit/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/Desktop/all_36_response/meiduo_mall/meiduo_mall/apps/orders/views.py", line 116, in post
+    + ('%09s' % user.id)
+TypeError: bad operand type for unary +: 'str'
+ERROR 2020-07-02 02:35:06,384 basehttp 154 "POST /orders/commit/ HTTP/1.1" 500 85016
+ERROR 2020-07-02 07:49:41,419 log 228 Internal Server Error: /orders/commit/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/redis/client.py", line 3911, in _execute_transaction
+    response = self.parse_response(connection, '_')
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/redis/client.py", line 3978, in parse_response
+    self, connection, command_name, **options)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/redis/client.py", line 915, in parse_response
+    response = connection.read_response()
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/redis/connection.py", line 756, in read_response
+    raise response
+redis.exceptions.ExecAbortError: Transaction discarded because of previous errors.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/Desktop/all_36_response/meiduo_mall/meiduo_mall/apps/orders/views.py", line 215, in post
+    pl.execute()
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/redis/client.py", line 4019, in execute
+    return execute(conn, stack, raise_on_error)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/redis/client.py", line 3914, in _execute_transaction
+    raise errors[0][1]
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/redis/client.py", line 3904, in _execute_transaction
+    self.parse_response(connection, '_')
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/redis/client.py", line 3978, in parse_response
+    self, connection, command_name, **options)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/redis/client.py", line 915, in parse_response
+    response = connection.read_response()
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/redis/connection.py", line 756, in read_response
+    raise response
+redis.exceptions.ResponseError: Command # 1 (HDEL carts_1) of pipeline caused error: wrong number of arguments for 'hdel' command
+ERROR 2020-07-02 07:49:41,423 basehttp 154 "POST /orders/commit/ HTTP/1.1" 500 134600
+ERROR 2020-07-02 08:54:02,234 log 228 Internal Server Error: /orders/commit/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/redis/client.py", line 3911, in _execute_transaction
+    response = self.parse_response(connection, '_')
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/redis/client.py", line 3978, in parse_response
+    self, connection, command_name, **options)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/redis/client.py", line 915, in parse_response
+    response = connection.read_response()
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/redis/connection.py", line 756, in read_response
+    raise response
+redis.exceptions.ExecAbortError: Transaction discarded because of previous errors.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/Desktop/all_36_response/meiduo_mall/meiduo_mall/apps/orders/views.py", line 215, in post
+    pl.execute()
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/redis/client.py", line 4019, in execute
+    return execute(conn, stack, raise_on_error)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/redis/client.py", line 3914, in _execute_transaction
+    raise errors[0][1]
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/redis/client.py", line 3904, in _execute_transaction
+    self.parse_response(connection, '_')
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/redis/client.py", line 3978, in parse_response
+    self, connection, command_name, **options)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/redis/client.py", line 915, in parse_response
+    response = connection.read_response()
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/redis/connection.py", line 756, in read_response
+    raise response
+redis.exceptions.ResponseError: Command # 1 (HDEL carts_1) of pipeline caused error: wrong number of arguments for 'hdel' command
+ERROR 2020-07-02 08:54:02,238 basehttp 154 "POST /orders/commit/ HTTP/1.1" 500 134600
+ERROR 2020-07-02 08:55:17,530 log 228 Internal Server Error: /orders/commit/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/redis/client.py", line 3911, in _execute_transaction
+    response = self.parse_response(connection, '_')
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/redis/client.py", line 3978, in parse_response
+    self, connection, command_name, **options)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/redis/client.py", line 915, in parse_response
+    response = connection.read_response()
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/redis/connection.py", line 756, in read_response
+    raise response
+redis.exceptions.ExecAbortError: Transaction discarded because of previous errors.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/Desktop/all_36_response/meiduo_mall/meiduo_mall/apps/orders/views.py", line 215, in post
+    pl.execute()
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/redis/client.py", line 4019, in execute
+    return execute(conn, stack, raise_on_error)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/redis/client.py", line 3914, in _execute_transaction
+    raise errors[0][1]
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/redis/client.py", line 3904, in _execute_transaction
+    self.parse_response(connection, '_')
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/redis/client.py", line 3978, in parse_response
+    self, connection, command_name, **options)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/redis/client.py", line 915, in parse_response
+    response = connection.read_response()
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/redis/connection.py", line 756, in read_response
+    raise response
+redis.exceptions.ResponseError: Command # 1 (HDEL carts_1) of pipeline caused error: wrong number of arguments for 'hdel' command
+ERROR 2020-07-02 08:55:17,543 basehttp 154 "POST /orders/commit/ HTTP/1.1" 500 134600
+ERROR 2020-07-02 12:59:24,488 log 228 Internal Server Error: /payment/20200702125843000000001/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/Desktop/all_36_response/meiduo_mall/meiduo_mall/apps/payment/views.py", line 33, in get
+    debug=settings.ALIPAY_DEBUG
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/alipay/__init__.py", line 81, in __init__
+    self._load_key()
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/alipay/__init__.py", line 94, in _load_key
+    with open(self._alipay_public_key_path) as fp:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/ubuntu/Desktop/all_36_response/meiduo_mall/meiduo_mall/apps/payment/keys/alipay_public_key.pem'
+ERROR 2020-07-02 12:59:24,559 basehttp 154 "GET /payment/20200702125843000000001/ HTTP/1.1" 500 97900
+WARNING 2020-07-03 10:37:28,660 log 228 Not Found: /
+WARNING 2020-07-03 10:37:28,797 basehttp 154 "GET / HTTP/1.1" 404 7197
+WARNING 2020-07-03 10:37:32,008 log 228 Not Found: /favicon.ico
+WARNING 2020-07-03 10:37:32,018 basehttp 154 "GET /favicon.ico HTTP/1.1" 404 7248
+WARNING 2020-07-03 10:37:34,454 log 228 Not Found: /
+WARNING 2020-07-03 10:37:34,467 basehttp 154 "GET / HTTP/1.1" 404 7197
+ERROR 2020-08-01 20:01:24,412 log 228 Internal Server Error: /login/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/Desktop/all_36_response/meiduo_mall/meiduo_mall/apps/users/views.py", line 336, in post
+    content = json.loads(request.body.decode())
+  File "/usr/lib/python3.6/json/__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.6/json/decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.6/json/decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+ERROR 2020-08-01 20:01:24,438 basehttp 154 "POST /login/ HTTP/1.1" 500 100240
+ERROR 2020-08-05 21:32:48,197 log 228 Internal Server Error: /register/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/Desktop/all_36_response/meiduo_mall/meiduo_mall/apps/users/views.py", line 296, in post
+    这段代码挺多余的
+NameError: name '这段代码挺多余的' is not defined
+ERROR 2020-08-05 21:32:48,236 basehttp 154 "POST /register/ HTTP/1.1" 500 84588
+WARNING 2020-08-06 14:47:30,593 log 228 Not Found: /images_codes/82a64fe2-b2dd-4950-913a-46000fa79208/
+WARNING 2020-08-06 14:47:30,620 basehttp 154 "GET /images_codes/82a64fe2-b2dd-4950-913a-46000fa79208/ HTTP/1.1" 404 7365
+WARNING 2020-08-06 14:47:30,679 log 228 Not Found: /images_codes/c9d550e2-c2ea-4bbf-a984-773f43873380/
+WARNING 2020-08-06 14:47:30,680 basehttp 154 "GET /images_codes/c9d550e2-c2ea-4bbf-a984-773f43873380/ HTTP/1.1" 404 7365
+WARNING 2020-08-06 14:47:30,703 log 228 Not Found: /images_codes/e0aaeb18-3cb5-4828-9f0e-784d5e8054ea/
+WARNING 2020-08-06 14:47:30,703 basehttp 154 "GET /images_codes/e0aaeb18-3cb5-4828-9f0e-784d5e8054ea/ HTTP/1.1" 404 7365
+WARNING 2020-08-06 14:47:30,719 log 228 Not Found: /images_codes/43438dfd-7d01-40d4-b41a-41b81f427e78/
+WARNING 2020-08-06 14:47:30,724 basehttp 154 "GET /images_codes/43438dfd-7d01-40d4-b41a-41b81f427e78/ HTTP/1.1" 404 7365
+WARNING 2020-08-06 14:49:44,811 log 228 Not Found: /images_codes/82a64fe2-b2dd-4950-913a-46000fa79208/
+WARNING 2020-08-06 14:49:44,817 basehttp 154 "GET /images_codes/82a64fe2-b2dd-4950-913a-46000fa79208/ HTTP/1.1" 404 7365
+WARNING 2020-08-06 14:49:44,885 log 228 Not Found: /images_codes/c9d550e2-c2ea-4bbf-a984-773f43873380/
+WARNING 2020-08-06 14:49:44,885 basehttp 154 "GET /images_codes/c9d550e2-c2ea-4bbf-a984-773f43873380/ HTTP/1.1" 404 7365
+WARNING 2020-08-06 14:49:44,911 log 228 Not Found: /images_codes/e0aaeb18-3cb5-4828-9f0e-784d5e8054ea/
+WARNING 2020-08-06 14:49:44,911 basehttp 154 "GET /images_codes/e0aaeb18-3cb5-4828-9f0e-784d5e8054ea/ HTTP/1.1" 404 7365
+WARNING 2020-08-06 14:49:44,930 log 228 Not Found: /images_codes/43438dfd-7d01-40d4-b41a-41b81f427e78/
+WARNING 2020-08-06 14:49:44,938 basehttp 154 "GET /images_codes/43438dfd-7d01-40d4-b41a-41b81f427e78/ HTTP/1.1" 404 7365
+WARNING 2020-08-06 14:52:02,352 log 228 Not Found: /images_codes/82a64fe2-b2dd-4950-913a-46000fa79208/
+WARNING 2020-08-06 14:52:02,356 basehttp 154 "GET /images_codes/82a64fe2-b2dd-4950-913a-46000fa79208/ HTTP/1.1" 404 7365
+WARNING 2020-08-06 14:52:02,387 log 228 Not Found: /images_codes/c9d550e2-c2ea-4bbf-a984-773f43873380/
+WARNING 2020-08-06 14:52:02,387 basehttp 154 "GET /images_codes/c9d550e2-c2ea-4bbf-a984-773f43873380/ HTTP/1.1" 404 7365
+WARNING 2020-08-06 14:52:02,405 log 228 Not Found: /images_codes/e0aaeb18-3cb5-4828-9f0e-784d5e8054ea/
+WARNING 2020-08-06 14:52:02,410 basehttp 154 "GET /images_codes/e0aaeb18-3cb5-4828-9f0e-784d5e8054ea/ HTTP/1.1" 404 7365
+WARNING 2020-08-06 14:52:02,420 log 228 Not Found: /images_codes/43438dfd-7d01-40d4-b41a-41b81f427e78/
+WARNING 2020-08-06 14:52:02,421 basehttp 154 "GET /images_codes/43438dfd-7d01-40d4-b41a-41b81f427e78/ HTTP/1.1" 404 7365
+WARNING 2020-08-06 14:53:02,275 log 228 Not Found: /images_codes/82a64fe2-b2dd-4950-913a-46000fa79208/
+WARNING 2020-08-06 14:53:02,278 basehttp 154 "GET /images_codes/82a64fe2-b2dd-4950-913a-46000fa79208/ HTTP/1.1" 404 7365
+WARNING 2020-08-06 14:53:02,308 log 228 Not Found: /images_codes/c9d550e2-c2ea-4bbf-a984-773f43873380/
+WARNING 2020-08-06 14:53:02,315 basehttp 154 "GET /images_codes/c9d550e2-c2ea-4bbf-a984-773f43873380/ HTTP/1.1" 404 7365
+WARNING 2020-08-06 14:53:02,337 log 228 Not Found: /images_codes/e0aaeb18-3cb5-4828-9f0e-784d5e8054ea/
+WARNING 2020-08-06 14:53:02,348 basehttp 154 "GET /images_codes/e0aaeb18-3cb5-4828-9f0e-784d5e8054ea/ HTTP/1.1" 404 7365
+WARNING 2020-08-06 14:53:02,366 log 228 Not Found: /images_codes/43438dfd-7d01-40d4-b41a-41b81f427e78/
+WARNING 2020-08-06 14:53:02,374 basehttp 154 "GET /images_codes/43438dfd-7d01-40d4-b41a-41b81f427e78/ HTTP/1.1" 404 7365
+WARNING 2020-08-06 14:55:27,632 log 228 Not Found: /images_codes/82a64fe2-b2dd-4950-913a-46000fa79208/
+WARNING 2020-08-06 14:55:27,636 basehttp 154 "GET /images_codes/82a64fe2-b2dd-4950-913a-46000fa79208/ HTTP/1.1" 404 7365
+WARNING 2020-08-06 14:55:27,692 log 228 Not Found: /images_codes/c9d550e2-c2ea-4bbf-a984-773f43873380/
+WARNING 2020-08-06 14:55:27,692 basehttp 154 "GET /images_codes/c9d550e2-c2ea-4bbf-a984-773f43873380/ HTTP/1.1" 404 7365
+WARNING 2020-08-06 14:55:27,706 log 228 Not Found: /images_codes/e0aaeb18-3cb5-4828-9f0e-784d5e8054ea/
+WARNING 2020-08-06 14:55:27,708 basehttp 154 "GET /images_codes/e0aaeb18-3cb5-4828-9f0e-784d5e8054ea/ HTTP/1.1" 404 7365
+WARNING 2020-08-06 14:55:27,723 log 228 Not Found: /images_codes/43438dfd-7d01-40d4-b41a-41b81f427e78/
+WARNING 2020-08-06 14:55:27,723 basehttp 154 "GET /images_codes/43438dfd-7d01-40d4-b41a-41b81f427e78/ HTTP/1.1" 404 7365
+WARNING 2020-08-06 14:56:29,133 log 228 Not Found: /images_codes/82a64fe2-b2dd-4950-913a-46000fa79208/
+WARNING 2020-08-06 14:56:29,137 basehttp 154 "GET /images_codes/82a64fe2-b2dd-4950-913a-46000fa79208/ HTTP/1.1" 404 7365
+WARNING 2020-08-06 14:56:29,190 log 228 Not Found: /images_codes/c9d550e2-c2ea-4bbf-a984-773f43873380/
+WARNING 2020-08-06 14:56:29,193 basehttp 154 "GET /images_codes/c9d550e2-c2ea-4bbf-a984-773f43873380/ HTTP/1.1" 404 7365
+WARNING 2020-08-06 14:56:29,205 log 228 Not Found: /images_codes/e0aaeb18-3cb5-4828-9f0e-784d5e8054ea/
+WARNING 2020-08-06 14:56:29,205 basehttp 154 "GET /images_codes/e0aaeb18-3cb5-4828-9f0e-784d5e8054ea/ HTTP/1.1" 404 7365
+WARNING 2020-08-06 14:56:29,217 log 228 Not Found: /images_codes/43438dfd-7d01-40d4-b41a-41b81f427e78/
+WARNING 2020-08-06 14:56:29,220 basehttp 154 "GET /images_codes/43438dfd-7d01-40d4-b41a-41b81f427e78/ HTTP/1.1" 404 7365
+WARNING 2020-08-06 14:56:44,623 log 228 Not Found: /images_codes/82a64fe2-b2dd-4950-913a-46000fa79208/
+WARNING 2020-08-06 14:56:44,624 basehttp 154 "GET /images_codes/82a64fe2-b2dd-4950-913a-46000fa79208/ HTTP/1.1" 404 7365
+WARNING 2020-08-06 14:56:44,678 log 228 Not Found: /images_codes/c9d550e2-c2ea-4bbf-a984-773f43873380/
+WARNING 2020-08-06 14:56:44,680 basehttp 154 "GET /images_codes/c9d550e2-c2ea-4bbf-a984-773f43873380/ HTTP/1.1" 404 7365
+WARNING 2020-08-06 14:56:44,690 log 228 Not Found: /images_codes/e0aaeb18-3cb5-4828-9f0e-784d5e8054ea/
+WARNING 2020-08-06 14:56:44,690 basehttp 154 "GET /images_codes/e0aaeb18-3cb5-4828-9f0e-784d5e8054ea/ HTTP/1.1" 404 7365
+WARNING 2020-08-06 14:56:44,703 log 228 Not Found: /images_codes/43438dfd-7d01-40d4-b41a-41b81f427e78/
+WARNING 2020-08-06 14:56:44,706 basehttp 154 "GET /images_codes/43438dfd-7d01-40d4-b41a-41b81f427e78/ HTTP/1.1" 404 7365
+WARNING 2020-08-06 14:57:03,412 log 228 Not Found: /images_codes/82a64fe2-b2dd-4950-913a-46000fa79208/
+WARNING 2020-08-06 14:57:03,416 basehttp 154 "GET /images_codes/82a64fe2-b2dd-4950-913a-46000fa79208/ HTTP/1.1" 404 7365
+WARNING 2020-08-06 14:57:03,477 log 228 Not Found: /images_codes/c9d550e2-c2ea-4bbf-a984-773f43873380/
+WARNING 2020-08-06 14:57:03,478 basehttp 154 "GET /images_codes/c9d550e2-c2ea-4bbf-a984-773f43873380/ HTTP/1.1" 404 7365
+WARNING 2020-08-06 14:57:03,493 log 228 Not Found: /images_codes/e0aaeb18-3cb5-4828-9f0e-784d5e8054ea/
+WARNING 2020-08-06 14:57:03,495 basehttp 154 "GET /images_codes/e0aaeb18-3cb5-4828-9f0e-784d5e8054ea/ HTTP/1.1" 404 7365
+WARNING 2020-08-06 14:57:03,509 log 228 Not Found: /images_codes/43438dfd-7d01-40d4-b41a-41b81f427e78/
+WARNING 2020-08-06 14:57:03,511 basehttp 154 "GET /images_codes/43438dfd-7d01-40d4-b41a-41b81f427e78/ HTTP/1.1" 404 7365
+WARNING 2020-08-06 14:57:32,287 log 228 Not Found: /images_codes/82a64fe2-b2dd-4950-913a-46000fa79208/
+WARNING 2020-08-06 14:57:32,291 basehttp 154 "GET /images_codes/82a64fe2-b2dd-4950-913a-46000fa79208/ HTTP/1.1" 404 7365
+WARNING 2020-08-06 14:57:32,350 log 228 Not Found: /images_codes/c9d550e2-c2ea-4bbf-a984-773f43873380/
+WARNING 2020-08-06 14:57:32,351 basehttp 154 "GET /images_codes/c9d550e2-c2ea-4bbf-a984-773f43873380/ HTTP/1.1" 404 7365
+WARNING 2020-08-06 14:57:32,366 log 228 Not Found: /images_codes/e0aaeb18-3cb5-4828-9f0e-784d5e8054ea/
+WARNING 2020-08-06 14:57:32,369 basehttp 154 "GET /images_codes/e0aaeb18-3cb5-4828-9f0e-784d5e8054ea/ HTTP/1.1" 404 7365
+WARNING 2020-08-06 14:57:32,392 log 228 Not Found: /images_codes/43438dfd-7d01-40d4-b41a-41b81f427e78/
+WARNING 2020-08-06 14:57:32,392 basehttp 154 "GET /images_codes/43438dfd-7d01-40d4-b41a-41b81f427e78/ HTTP/1.1" 404 7365
+WARNING 2020-08-06 14:57:50,017 log 228 Not Found: /images_codes/82a64fe2-b2dd-4950-913a-46000fa79208/
+WARNING 2020-08-06 14:57:50,019 basehttp 154 "GET /images_codes/82a64fe2-b2dd-4950-913a-46000fa79208/ HTTP/1.1" 404 7365
+WARNING 2020-08-06 14:57:50,077 log 228 Not Found: /images_codes/c9d550e2-c2ea-4bbf-a984-773f43873380/
+WARNING 2020-08-06 14:57:50,078 basehttp 154 "GET /images_codes/c9d550e2-c2ea-4bbf-a984-773f43873380/ HTTP/1.1" 404 7365
+WARNING 2020-08-06 14:57:50,091 log 228 Not Found: /images_codes/e0aaeb18-3cb5-4828-9f0e-784d5e8054ea/
+WARNING 2020-08-06 14:57:50,092 basehttp 154 "GET /images_codes/e0aaeb18-3cb5-4828-9f0e-784d5e8054ea/ HTTP/1.1" 404 7365
+WARNING 2020-08-06 14:57:50,104 log 228 Not Found: /images_codes/43438dfd-7d01-40d4-b41a-41b81f427e78/
+WARNING 2020-08-06 14:57:50,107 basehttp 154 "GET /images_codes/43438dfd-7d01-40d4-b41a-41b81f427e78/ HTTP/1.1" 404 7365
+WARNING 2020-08-06 14:57:56,472 log 228 Not Found: /images_codes/82a64fe2-b2dd-4950-913a-46000fa79208/
+WARNING 2020-08-06 14:57:56,480 basehttp 154 "GET /images_codes/82a64fe2-b2dd-4950-913a-46000fa79208/ HTTP/1.1" 404 7365
+WARNING 2020-08-06 14:57:56,528 log 228 Not Found: /images_codes/c9d550e2-c2ea-4bbf-a984-773f43873380/
+WARNING 2020-08-06 14:57:56,535 basehttp 154 "GET /images_codes/c9d550e2-c2ea-4bbf-a984-773f43873380/ HTTP/1.1" 404 7365
+WARNING 2020-08-06 14:57:56,542 log 228 Not Found: /images_codes/e0aaeb18-3cb5-4828-9f0e-784d5e8054ea/
+WARNING 2020-08-06 14:57:56,549 basehttp 154 "GET /images_codes/e0aaeb18-3cb5-4828-9f0e-784d5e8054ea/ HTTP/1.1" 404 7365
+WARNING 2020-08-06 14:57:56,557 log 228 Not Found: /images_codes/43438dfd-7d01-40d4-b41a-41b81f427e78/
+WARNING 2020-08-06 14:57:56,565 basehttp 154 "GET /images_codes/43438dfd-7d01-40d4-b41a-41b81f427e78/ HTTP/1.1" 404 7365
+WARNING 2020-08-06 14:58:03,383 log 228 Not Found: /images_codes/82a64fe2-b2dd-4950-913a-46000fa79208/
+WARNING 2020-08-06 14:58:03,383 basehttp 154 "GET /images_codes/82a64fe2-b2dd-4950-913a-46000fa79208/ HTTP/1.1" 404 7365
+WARNING 2020-08-06 14:58:03,452 log 228 Not Found: /images_codes/c9d550e2-c2ea-4bbf-a984-773f43873380/
+WARNING 2020-08-06 14:58:03,462 basehttp 154 "GET /images_codes/c9d550e2-c2ea-4bbf-a984-773f43873380/ HTTP/1.1" 404 7365
+WARNING 2020-08-06 14:58:03,487 log 228 Not Found: /images_codes/e0aaeb18-3cb5-4828-9f0e-784d5e8054ea/
+WARNING 2020-08-06 14:58:03,488 basehttp 154 "GET /images_codes/e0aaeb18-3cb5-4828-9f0e-784d5e8054ea/ HTTP/1.1" 404 7365
+WARNING 2020-08-06 14:58:03,507 log 228 Not Found: /images_codes/43438dfd-7d01-40d4-b41a-41b81f427e78/
+WARNING 2020-08-06 14:58:03,521 basehttp 154 "GET /images_codes/43438dfd-7d01-40d4-b41a-41b81f427e78/ HTTP/1.1" 404 7365
+WARNING 2020-08-06 15:08:07,918 log 228 Not Found: /images_codes/82a64fe2-b2dd-4950-913a-46000fa79208/
+WARNING 2020-08-06 15:08:07,918 basehttp 154 "GET /images_codes/82a64fe2-b2dd-4950-913a-46000fa79208/ HTTP/1.1" 404 7365
+WARNING 2020-08-06 15:08:07,978 log 228 Not Found: /images_codes/c9d550e2-c2ea-4bbf-a984-773f43873380/
+WARNING 2020-08-06 15:08:07,985 basehttp 154 "GET /images_codes/c9d550e2-c2ea-4bbf-a984-773f43873380/ HTTP/1.1" 404 7365
+WARNING 2020-08-06 15:08:08,011 log 228 Not Found: /images_codes/e0aaeb18-3cb5-4828-9f0e-784d5e8054ea/
+WARNING 2020-08-06 15:08:08,011 basehttp 154 "GET /images_codes/e0aaeb18-3cb5-4828-9f0e-784d5e8054ea/ HTTP/1.1" 404 7365
+WARNING 2020-08-06 15:08:08,032 log 228 Not Found: /images_codes/43438dfd-7d01-40d4-b41a-41b81f427e78/
+WARNING 2020-08-06 15:08:08,032 basehttp 154 "GET /images_codes/43438dfd-7d01-40d4-b41a-41b81f427e78/ HTTP/1.1" 404 7365
+WARNING 2020-08-06 15:08:15,358 log 228 Not Found: /images_codes/82a64fe2-b2dd-4950-913a-46000fa79208/
+WARNING 2020-08-06 15:08:15,358 basehttp 154 "GET /images_codes/82a64fe2-b2dd-4950-913a-46000fa79208/ HTTP/1.1" 404 7365
+WARNING 2020-08-06 15:08:15,431 log 228 Not Found: /images_codes/c9d550e2-c2ea-4bbf-a984-773f43873380/
+WARNING 2020-08-06 15:08:15,433 basehttp 154 "GET /images_codes/c9d550e2-c2ea-4bbf-a984-773f43873380/ HTTP/1.1" 404 7365
+WARNING 2020-08-06 15:08:15,454 log 228 Not Found: /images_codes/e0aaeb18-3cb5-4828-9f0e-784d5e8054ea/
+WARNING 2020-08-06 15:08:15,455 basehttp 154 "GET /images_codes/e0aaeb18-3cb5-4828-9f0e-784d5e8054ea/ HTTP/1.1" 404 7365
+WARNING 2020-08-06 15:08:15,475 log 228 Not Found: /images_codes/43438dfd-7d01-40d4-b41a-41b81f427e78/
+WARNING 2020-08-06 15:08:15,477 basehttp 154 "GET /images_codes/43438dfd-7d01-40d4-b41a-41b81f427e78/ HTTP/1.1" 404 7365
+WARNING 2020-08-06 15:10:43,278 log 228 Not Found: /images_codes/82a64fe2-b2dd-4950-913a-46000fa79208/
+WARNING 2020-08-06 15:10:43,279 basehttp 154 "GET /images_codes/82a64fe2-b2dd-4950-913a-46000fa79208/ HTTP/1.1" 404 7365
+WARNING 2020-08-06 15:10:43,345 log 228 Not Found: /images_codes/c9d550e2-c2ea-4bbf-a984-773f43873380/
+WARNING 2020-08-06 15:10:43,346 basehttp 154 "GET /images_codes/c9d550e2-c2ea-4bbf-a984-773f43873380/ HTTP/1.1" 404 7365
+WARNING 2020-08-06 15:10:43,362 log 228 Not Found: /images_codes/e0aaeb18-3cb5-4828-9f0e-784d5e8054ea/
+WARNING 2020-08-06 15:10:43,363 basehttp 154 "GET /images_codes/e0aaeb18-3cb5-4828-9f0e-784d5e8054ea/ HTTP/1.1" 404 7365
+WARNING 2020-08-06 15:10:43,377 log 228 Not Found: /images_codes/43438dfd-7d01-40d4-b41a-41b81f427e78/
+WARNING 2020-08-06 15:10:43,378 basehttp 154 "GET /images_codes/43438dfd-7d01-40d4-b41a-41b81f427e78/ HTTP/1.1" 404 7365
+WARNING 2020-08-06 15:11:03,492 log 228 Not Found: /images_codes/82a64fe2-b2dd-4950-913a-46000fa79208/
+WARNING 2020-08-06 15:11:03,498 basehttp 154 "GET /images_codes/82a64fe2-b2dd-4950-913a-46000fa79208/ HTTP/1.1" 404 7365
+WARNING 2020-08-06 15:11:03,502 log 228 Not Found: /images_codes/c9d550e2-c2ea-4bbf-a984-773f43873380/
+WARNING 2020-08-06 15:11:03,503 basehttp 154 "GET /images_codes/c9d550e2-c2ea-4bbf-a984-773f43873380/ HTTP/1.1" 404 7365
+WARNING 2020-08-06 15:11:03,515 log 228 Not Found: /images_codes/e0aaeb18-3cb5-4828-9f0e-784d5e8054ea/
+WARNING 2020-08-06 15:11:03,516 basehttp 154 "GET /images_codes/e0aaeb18-3cb5-4828-9f0e-784d5e8054ea/ HTTP/1.1" 404 7365
+WARNING 2020-08-06 15:11:03,529 log 228 Not Found: /images_codes/43438dfd-7d01-40d4-b41a-41b81f427e78/
+WARNING 2020-08-06 15:11:03,530 basehttp 154 "GET /images_codes/43438dfd-7d01-40d4-b41a-41b81f427e78/ HTTP/1.1" 404 7365
+ERROR 2020-08-27 17:02:05,757 log 228 Internal Server Error: /orders/commit/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/redis/client.py", line 3911, in _execute_transaction
+    response = self.parse_response(connection, '_')
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/redis/client.py", line 3978, in parse_response
+    self, connection, command_name, **options)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/redis/client.py", line 915, in parse_response
+    response = connection.read_response()
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/redis/connection.py", line 756, in read_response
+    raise response
+redis.exceptions.ExecAbortError: Transaction discarded because of previous errors.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/Desktop/all_36_response/meiduo_mall/meiduo_mall/apps/orders/views.py", line 215, in post
+    pl.execute()
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/redis/client.py", line 4019, in execute
+    return execute(conn, stack, raise_on_error)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/redis/client.py", line 3914, in _execute_transaction
+    raise errors[0][1]
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/redis/client.py", line 3904, in _execute_transaction
+    self.parse_response(connection, '_')
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/redis/client.py", line 3978, in parse_response
+    self, connection, command_name, **options)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/redis/client.py", line 915, in parse_response
+    response = connection.read_response()
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/redis/connection.py", line 756, in read_response
+    raise response
+redis.exceptions.ResponseError: Command # 1 (HDEL carts_1) of pipeline caused error: wrong number of arguments for 'hdel' command
+ERROR 2020-08-27 17:02:05,769 basehttp 154 "POST /orders/commit/ HTTP/1.1" 500 134857
+ERROR 2020-08-27 17:02:07,980 log 228 Internal Server Error: /orders/commit/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/redis/client.py", line 3911, in _execute_transaction
+    response = self.parse_response(connection, '_')
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/redis/client.py", line 3978, in parse_response
+    self, connection, command_name, **options)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/redis/client.py", line 915, in parse_response
+    response = connection.read_response()
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/redis/connection.py", line 756, in read_response
+    raise response
+redis.exceptions.ExecAbortError: Transaction discarded because of previous errors.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/Desktop/all_36_response/meiduo_mall/meiduo_mall/apps/orders/views.py", line 215, in post
+    pl.execute()
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/redis/client.py", line 4019, in execute
+    return execute(conn, stack, raise_on_error)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/redis/client.py", line 3914, in _execute_transaction
+    raise errors[0][1]
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/redis/client.py", line 3904, in _execute_transaction
+    self.parse_response(connection, '_')
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/redis/client.py", line 3978, in parse_response
+    self, connection, command_name, **options)
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/redis/client.py", line 915, in parse_response
+    response = connection.read_response()
+  File "/home/ubuntu/.virtualenvs/meiduo_mall/lib/python3.6/site-packages/redis/connection.py", line 756, in read_response
+    raise response
+redis.exceptions.ResponseError: Command # 1 (HDEL carts_1) of pipeline caused error: wrong number of arguments for 'hdel' command
+ERROR 2020-08-27 17:02:07,985 basehttp 154 "POST /orders/commit/ HTTP/1.1" 500 134857
+WARNING 2020-09-04 20:26:41,645 log 228 Not Found: /
+WARNING 2020-09-04 20:26:41,658 basehttp 154 "GET / HTTP/1.1" 404 7197
+WARNING 2020-09-04 20:26:44,053 log 228 Not Found: /favicon.ico
+WARNING 2020-09-04 20:26:44,054 basehttp 154 "GET /favicon.ico HTTP/1.1" 404 7248
